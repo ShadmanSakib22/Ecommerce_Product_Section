@@ -111,6 +111,23 @@ body {
   margin-left: 2px;
 }
 
+.product-description-container .testimony .user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.product-description-container .testimony .user-info-text {
+  font-size: 16px;
+  font-weight: 500;
+  color: #141b4d;
+  line-height: 1;
+}
+.product-description-container .testimony .user-info-text p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #141b4d60;
+}
+
 .product-description-container .testimony blockquote {
   margin-top: 9px;
   width: 96.5%;
@@ -158,10 +175,10 @@ body {
   gap: 5px;
 }
 .product-description-container .btn {
-  appearance: none;
   background-color: #1db469;
   color: #fff;
-  padding: 20px 90px 21px 70px;
+  padding: 20px;
+  width: 282px;
   border-radius: 5px;
   font-size: 22px;
   font-weight: 500;
@@ -171,7 +188,7 @@ body {
   opacity: 0.7;
   cursor: pointer;
 }
-.product-description-container .actions .quantity {
+.product-description-container .quantity {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -181,15 +198,18 @@ body {
   text-align: center;
   color: #141b4d;
 }
-.product-description-container .actions .quantity button {
-  background-color: #f2f2f6;
+.product-description-container .quantity button {
   width: 30px;
   height: 30px;
   border-radius: 50%;
 }
-.product-description-container .actions .quantity button:hover {
+.product-description-container .quantity button:hover {
   opacity: 0.7;
   cursor: pointer;
+}
+
+.product-description-container .price .quantity {
+  display: none;
 }
 
 .product-description-container .payment-options {
@@ -216,6 +236,10 @@ body {
 }
 
 @media screen and (max-width: 1080px) {
+  body {
+    font-size: 14px;
+    line-height: 20px;
+  }
   .product-container {
     flex-direction: column;
     padding-left: 24px;
@@ -251,6 +275,9 @@ body {
     padding-left: 20px;
     padding-right: 20px;
   }
+  .product-image-container {
+    gap: 12px;
+  }
   .product-image-container .thumbnail-carousel {
     gap: 8px;
   }
@@ -266,12 +293,24 @@ body {
     width: 412px;
     height: 412px;
   }
+  .product-description-container .title {
+    margin-top: 16px;
+    font-size: 48px;
+  }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 576px) {
+  body {
+    font-size: 12px;
+    line-height: 17px;
+  }
   .product-container {
     padding-left: 11px;
     padding-right: 11px;
+    overflow: hidden;
+  }
+  .product-image-container {
+    gap: 9px;
   }
   .product-image-container .thumbnail-carousel {
     gap: 8px;
@@ -281,11 +320,113 @@ body {
     height: 67px;
   }
   .main-image-container {
-    width: 292px;
+    width: 90%;
+    max-width: 292px;
     height: 292px;
   }
   .main-image {
-    width: 292px;
+    width: 90%;
+    max-width: 292px;
     height: 292px;
+  }
+  .product-description-container {
+    padding: 0 11px;
+  }
+
+  .product-description-container .title {
+    margin-top: 16px;
+    font-size: 32px;
+  }
+  .product-description-container .testimony {
+    margin-top: 11px;
+    background-color: #fff;
+    border-radius: 0;
+    padding: 0;
+  }
+
+  .product-description-container .testimony img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 2px;
+  }
+
+  .product-description-container .testimony .user-info {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+  .product-description-container .testimony .user-info-text {
+    font-size: 12px;
+  }
+  .product-description-container .testimony .user-info-text p {
+    font-size: 12px;
+  }
+
+  .product-description-container .testimony blockquote {
+    margin-top: 7px;
+    width: 90%;
+    min-width: 287px;
+    display: block;
+    font-size: 12px;
+    line-height: 17px;
+    color: #3f446c;
+  }
+
+  .product-description-container .features {
+    margin-top: 30px;
+  }
+  .product-description-container .features li {
+    font-size: 12px;
+    line-height: 28px;
+    margin: 0 2px;
+    width: 80%;
+    min-width: 310px;
+  }
+  .product-description-container .features li img {
+    display: none;
+  }
+  .product-description-container .features li:last-child {
+    border-bottom: none;
+  }
+
+  .product-description-container .price {
+    color: #cf1010;
+    font-size: 32px;
+    margin: 55px 3px 0 3px;
+    display: inline-flex;
+    gap: 20px;
+    align-items: end;
+  }
+  .product-description-container .price span {
+    display: none;
+  }
+
+  .product-description-container .actions {
+    margin-top: 16px;
+  }
+  .product-description-container .btn {
+    padding: 10px 0px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0%;
+    width: 93%;
+    max-width: 336px;
+  }
+  .product-description-container .actions .quantity {
+    display: none;
+  }
+  .product-description-container .price .quantity {
+    display: flex;
+  }
+
+  .product-description-container .payment-options {
+    display: none;
+  }
+
+  .product-description-container .warranty {
+    display: none;
   }
 }
