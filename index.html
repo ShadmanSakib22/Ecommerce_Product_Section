@@ -55,21 +55,32 @@
             </li>
           </ul>
           <div class="price">
-            <div><span>$369.00</span> $249.00</div>
+            <div>
+              <span>$369.00</span>
+              <div class="discounted-price" style="display: inline">
+                $249.00
+              </div>
+            </div>
             <div class="quantity">
-              <!--Hidden above 576px-->
-              <button><img src="/Assets/minus.png" alt="-" /></button>
-              <div>1</div>
-              <button><img src="/Assets/plus.png" alt="+" /></button>
+              <button class="minus">
+                <img src="/Assets/minus.png" alt="-" />
+              </button>
+              <div id="quantity-count" style="min-width: 30px">1</div>
+              <button class="plus">
+                <img src="/Assets/plus.png" alt="+" />
+              </button>
             </div>
           </div>
           <div class="actions">
             <button class="btn">Add to Cart</button>
             <div class="quantity">
-              <!--Hidden below 576px-->
-              <button><img src="/Assets/minus.png" alt="-" /></button>
-              <span>1</span>
-              <button><img src="/Assets/plus.png" alt="+" /></button>
+              <button class="minus">
+                <img src="/Assets/minus.png" alt="-" />
+              </button>
+              <div style="min-width: 30px">1</div>
+              <button class="plus">
+                <img src="/Assets/plus.png" alt="+" />
+              </button>
             </div>
           </div>
           <figure class="payment-options">
